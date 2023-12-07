@@ -4,7 +4,7 @@
 
 int main()
 {
-    int i, j, fd;
+    int j, fd;
     int dato;
     fd = open("fprueba", O_RDONLY);
 
@@ -13,7 +13,7 @@ int main()
         // Proceso padre
         while (read(fd, &dato, sizeof(int) > 0))
         {
-            for (i = 0; i < 100000; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 // espera
                 printf("Proceso padre. Dato = %d\n", dato);
