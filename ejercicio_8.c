@@ -13,15 +13,16 @@ int main()
         // Proceso padre
         while (read(fd, &dato, sizeof(int) > 0))
         {
-            for (j = 0; j < 100000; j++)
+            for (i = 0; i < 100000; i++)
             {
                 // espera
                 printf("Proceso padre. Dato = %d\n", dato);
             }
         }
-    }else
+    }
+    else
     {
-        //Proceso hijo
+        // Proceso hijo
         while (read(fd, &dato, sizeof(int) > 0))
         {
             for (j = 0; j < 100000; j++)
@@ -30,9 +31,7 @@ int main()
                 printf("Proceso padre. Dato = %d\n", dato);
             }
         }
-        
     }
-    
 
     return 0;
 }
